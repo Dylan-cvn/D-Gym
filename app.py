@@ -18,8 +18,8 @@ from io import StringIO
 # CONFIGURATION & CONSTANTES
 # ============================================================================
 
-APP_TITLE = "💪 CoachMuscu"
-APP_PASSWORD = "01012026"
+APP_TITLE = "💪 Musculation"
+APP_PASSWORD = "230407"
 
 POIDS_INCREMENT = {"compose": 2.5, "isolation": 1.25}
 BACKOFF_PERCENT = 0.90
