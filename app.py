@@ -1269,7 +1269,7 @@ def main():
 
                     with st.expander("💡 Coach + Échauffement"):
                         st.write(obj["message"])
-                        st.caption(f"Repos : {ex['rest']}")
+                        st.caption(f"Repos : {ex['rest_max']}")
                         st.caption(ex["notes"])
                         if obj["poids"] and obj["poids"] >= 30:
                             st.markdown("**Protocole d'échauffement :**")
@@ -1321,7 +1321,7 @@ def main():
 
                     if "precedent" in objectif:
                         st.caption(objectif["precedent"])
-                    min_r, max_r = exercice["rep_range"]
+                    min_r, max_r = exercice["NB_rep"]
                     st.caption(f"Plage de reps : {min_r}-{max_r} • Repos : {exercice['rest']}")
 
                     # Alerte retour après pause
