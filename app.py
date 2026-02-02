@@ -676,7 +676,7 @@ def verifier_mot_de_passe() -> bool:
             st.rerun()
         else:
             st.error("Mot de passe incorrect")
-    st.caption("Indice : date d'anniversaire du programme 💪")
+    st.caption("Indice : Code Nonstop")
     return False
 
 
@@ -1312,25 +1312,6 @@ def main():
                     break
             seance_choisie = st.selectbox("Séance", noms_seances, index=index_defaut)
             exercices_choisis = EXERCICES[seance_choisie]
-
-            # Timer
-            with st.expander("⏱️ Chrono de repos"):
-                ex_timer = st.selectbox("Exercice", [ex["name"] for ex in exercices_choisis], key="timer_ex")
-                ex_timer_data = next(ex for ex in exercices_choisis if ex["name"] == ex_timer)
-                temps_repos = ex_timer_data.get("rest_seconds", 90)
-                st.write(f"Repos recommandé : **{temps_repos}s**")
-                options_timer = sorted({30, 60, 75, 90, 120, 180, temps_repos})
-                temps_choisi = st.select_slider("Durée (secondes)", options=options_timer, value=temps_repos, key="timer_val")
-                if st.button("▶️ Lancer le chrono", use_container_width=True, key="timer_start"):
-                    barre = st.progress(0)
-                    texte = st.empty()
-                    for i in range(temps_choisi, 0, -1):
-                        barre.progress((temps_choisi - i) / temps_choisi)
-                        texte.markdown(f"### ⏱️ {i}s")
-                        time.sleep(1)
-                    barre.progress(1.0)
-                    texte.markdown("### ✅ C'EST PARTI !")
-                    st.balloons()
 
             schema = st.radio(
                 "Type de séries",
