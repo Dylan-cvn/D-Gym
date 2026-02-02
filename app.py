@@ -649,7 +649,7 @@ def verifier_mot_de_passe() -> bool:
         st.session_state.authenticated = False
     if st.session_state.authenticated:
         return True
-    st.markdown("## 🔐 CoachMuscu")
+    st.markdown("## 🔐 AnalyseMuscu")
     st.markdown("Entre ton mot de passe pour accéder à ton suivi.")
     password = st.text_input("Mot de passe", type="password", key="password_input")
     if st.button("Connexion", type="primary", use_container_width=True):
@@ -1148,13 +1148,13 @@ def main():
             padding: 0.75rem 1rem;
             font-size: 1.1rem;
             border-radius: 25px;
-            border: 1px solid #00FF88;
+            border: 1px solid #2ECC71;
             background: transparent;
-            color: #00FF88;
+            color: #2ECC71;
             transition: all 0.3s ease;
         }
         .stButton > button:hover {
-            background: #00FF88;
+            background: #2ECC71;
             color: #000000;
             box-shadow: 0 0 15px #00FF88, 0 0 30px #00FF8855;
         }
