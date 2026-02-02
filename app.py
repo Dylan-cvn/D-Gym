@@ -1135,40 +1135,41 @@ def main():
     coach = CoachAdaptatif(logs)
 
     # CSS
-    st.markdown("""<style>
+        st.markdown("""<style>
         /* === FOND & GLOBAL === */
         .stApp {
             max-width: 100%;
             background: #000000;
         }
 
-        /* === BOUTONS NÉON === */
-        .stButton > button {
+        /* === BOUTONS NÉON VERT (tous les boutons par défaut) === */
+        button {
             width: 100%;
             padding: 0.75rem 1rem;
             font-size: 1.1rem;
             border-radius: 25px;
-            border: 1px solid #2ECC71;
-            background: transparent;
-            color: #2ECC71;
+            border: 1px solid #2ECC71 !important;
+            background: transparent !important;
+            color: #2ECC71 !important;
             transition: all 0.3s ease;
         }
-        .stButton > button:hover {
-            background: #2ECC71;
-            color: #000000;
-            box-shadow: 0 0 15px #2ECC71, 0 0 30px #00FF8855;
+        button:hover {
+            background: #2ECC71 !important;
+            color: #000000 !important;
+            box-shadow: 0 0 15px #2ECC71, 0 0 30px #2ECC7155;
         }
-        
+
         /* === BOUTON PRIMARY (Connexion) EN BLEU === */
-        .stButton > button[data-testid="stBaseButton-primary"] {
-            border: 1px solid #3498DB;
-            background: #3498DB;
-            color: #FFFFFF;
+        button[data-testid="stBaseButton-primary"] {
+            border: 1px solid #3498DB !important;
+            background: #3498DB !important;
+            color: #FFFFFF !important;
         }
-        .stButton > button[data-testid="stBaseButton-primary"]:hover {
-            background: #2980B9;
-            border-color: #2980B9;
-            box-shadow: 0 0 15px #3498DB, 0 0 30px #3498DB55;
+        button[data-testid="stBaseButton-primary"]:hover {
+            background: #2980B9 !important;
+            border-color: #2980B9 !important;
+            box-shadow: 0 0 15px #3498DB, 0 0 30px #3498DB55 !important;
+            color: #FFFFFF !important;
         }
 
         /* === INPUTS ARRONDIS === */
@@ -1185,8 +1186,8 @@ def main():
         }
         .stNumberInput > div > div > input:focus,
         .stTextInput > div > div > input:focus {
-            border-color: #00FF88;
-            box-shadow: 0 0 8px #00FF8844;
+            border-color: #2ECC71;
+            box-shadow: 0 0 8px #2ECC7144;
         }
 
         /* === TABS NÉON === */
@@ -1199,7 +1200,7 @@ def main():
         .stTabs [aria-selected="true"] {
             color: #2ECC71 !important;
             border-bottom: 2px solid #2ECC71 !important;
-            text-shadow: 0 0 10px #00FF8866;
+            text-shadow: 0 0 10px #2ECC7166;
         }
 
         /* === METRICS GLOW === */
@@ -1212,7 +1213,7 @@ def main():
         }
         [data-testid="stMetricValue"] {
             color: #2ECC71;
-            text-shadow: 0 0 8px #00FF8844;
+            text-shadow: 0 0 8px #2ECC7144;
         }
 
         /* === EXPANDERS === */
@@ -1241,7 +1242,7 @@ def main():
             font-size: 2rem;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(90deg, #2ECC71, #00CC66, #2ECC71);
+            background: linear-gradient(90deg, #2ECC71, #27AE60, #2ECC71);
             border-radius: 25px;
             animation: pulse 1s infinite;
             color: #000;
