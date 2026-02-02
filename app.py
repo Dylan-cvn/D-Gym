@@ -1322,7 +1322,7 @@ def main():
                     if "precedent" in objectif:
                         st.caption(objectif["precedent"])
                     min_r, max_r = exercice["Nb_rep"]
-                    st.caption(f"Plage de reps : {min_r}-{max_r} • Repos : {exercice['rest']}")
+                    st.caption(f"Plage de reps : {min_r}-{max_r} • Repos : {exercice['rest_max']}")
 
                     # Alerte retour après pause
                     if objectif.get("jours_depuis_derniere") and objectif["jours_depuis_derniere"] > 14:
