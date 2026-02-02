@@ -33,10 +33,10 @@ JOURS_SEMAINE = {
     0: "Repos",      # Lundi
     1: "Repos",      # Mardi
     2: "Repos",      # Mercredi
-    3: "Jeudi - Pecs / Biceps / Triceps",   # Jeudi
+    3: "Jeudi : Pecs / Biceps / Triceps",   # Jeudi
     4: "Repos",      # Vendredi
-    5: "Samedi - Épaules / Dos / Triceps",  # Samedi
-    6: "Dimanche - Pecs / Biceps / Arr. Épaule"  # Dimanche
+    5: "Samedi : Épaule / Dos / Triceps",  # Samedi
+    6: "Dimanche : Pecs / Biceps / Arr. Épaule"  # Dimanche
 }
 
 EXERCICES_COMPOSES = [
@@ -55,20 +55,20 @@ EXERCICES = {
         {
             "name": "Développé Couché",
             "groupe": "Pecs",
-            "sets": 4,
-            "rep_range": (6, 10),
-            "rest": "3 min",
+            "sets": 3,
+            "Nb_rep": (7, 10),
+            "rest_max": "3 min",
             "rest_seconds": 180,
             "video": "https://www.youtube.com/watch?v=rT7DgCr-3pg",
             "notes": "Omoplates serrées, pieds au sol, descente contrôlée jusqu'à la poitrine."
         },
         {
-            "name": "Pecs Poulie (Vis-à-vis)",
+            "name": "Pecs Poulie (hug ou unilatérale)",
             "groupe": "Pecs",
             "sets": 3,
-            "rep_range": (10, 15),
-            "rest": "90s",
-            "rest_seconds": 90,
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=taI4XduLpTk",
             "notes": "Étirement complet, squeeze en fin de mouvement. Contrôle la phase négative."
         },
@@ -76,9 +76,9 @@ EXERCICES = {
             "name": "Biceps Pupitre",
             "groupe": "Biceps",
             "sets": 3,
-            "rep_range": (8, 12),
-            "rest": "90s",
-            "rest_seconds": 90,
+            "Nb_rep": (8, 12),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=fIWP-FRFNU0",
             "notes": "Coudes bien calés, pas de triche. Descente lente et complète."
         },
@@ -86,9 +86,9 @@ EXERCICES = {
             "name": "Biceps Curl Poulie",
             "groupe": "Biceps",
             "sets": 3,
-            "rep_range": (10, 15),
-            "rest": "75s",
-            "rest_seconds": 75,
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=NFzTWp2qpiE",
             "notes": "Tension constante grâce à la poulie. Squeeze en haut."
         },
@@ -96,9 +96,9 @@ EXERCICES = {
             "name": "Triceps Unilatéral Poulie",
             "groupe": "Triceps",
             "sets": 3,
-            "rep_range": (10, 15),
-            "rest": "75s",
-            "rest_seconds": 75,
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=pKlwpqL0ydU",
             "notes": "Coude fixe, extension complète. Travaille chaque bras séparément."
         },
@@ -106,9 +106,9 @@ EXERCICES = {
             "name": "Extension Triceps Allongé",
             "groupe": "Triceps",
             "sets": 3,
-            "rep_range": (8, 12),
-            "rest": "90s",
-            "rest_seconds": 90,
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=d_KZxkY_0cM",
             "notes": "Skull crushers ou avec haltères. Coudes stables, étirement complet."
         },
@@ -117,19 +117,19 @@ EXERCICES = {
         {
             "name": "Élévation Latérale",
             "groupe": "Épaules",
-            "sets": 4,
-            "rep_range": (12, 18),
-            "rest": "75s",
-            "rest_seconds": 75,
+            "sets": 3,
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=3VcKaXpzqRo",
             "notes": "Léger penché en avant, contrôle total. Pas de triche avec le dos."
         },
         {
             "name": "Développé Militaire",
             "groupe": "Épaules",
-            "sets": 4,
-            "rep_range": (6, 10),
-            "rest": "3 min",
+            "sets": 3,
+            "Nb_rep": (7, 10),
+            "rest_max": "3 min",
             "rest_seconds": 180,
             "video": "https://www.youtube.com/watch?v=2yjwXTZQDDI",
             "notes": "Gainage solide, pas de cambrure excessive. Poussée verticale complète."
@@ -138,8 +138,8 @@ EXERCICES = {
             "name": "Tirage Vertical",
             "groupe": "Dos",
             "sets": 4,
-            "rep_range": (8, 12),
-            "rest": "2 min",
+            "Nb_rep": (8, 12),
+            "rest_max": "2 min",
             "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=CAwf7n6Luuc",
             "notes": "Tirer vers le haut de la poitrine, coudes vers le bas. Squeeze les dorsaux."
@@ -148,8 +148,8 @@ EXERCICES = {
             "name": "Tirage Horizontal",
             "groupe": "Dos",
             "sets": 4,
-            "rep_range": (8, 12),
-            "rest": "2 min",
+            "Nb_rep": (8, 12),
+            "rest_max": "2 min",
             "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=HJSVR_67OlM",
             "notes": "Dos droit, tirer vers le nombril. Squeeze en fin de mouvement."
@@ -158,9 +158,9 @@ EXERCICES = {
             "name": "Extension Triceps Poulie",
             "groupe": "Triceps",
             "sets": 3,
-            "rep_range": (10, 15),
-            "rest": "75s",
-            "rest_seconds": 75,
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=vB5OHsJ3EME",
             "notes": "Coudes collés au corps, extension complète. Corde ou barre droite."
         },
@@ -168,8 +168,8 @@ EXERCICES = {
             "name": "Dips",
             "groupe": "Triceps",
             "sets": 3,
-            "rep_range": (6, 12),
-            "rest": "2 min",
+            "Nb_rep": (8, 12),
+            "rest_max": "2 min",
             "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=2z8JmcrW-As",
             "notes": "Corps droit pour cibler les triceps. Descente contrôlée, poussée explosive."
@@ -179,9 +179,9 @@ EXERCICES = {
         {
             "name": "Développé Incliné",
             "groupe": "Pecs",
-            "sets": 4,
-            "rep_range": (6, 10),
-            "rest": "3 min",
+            "sets": 3,
+            "Nb_rep": (7, 10),
+            "rest_max": "3 min",
             "rest_seconds": 180,
             "video": "https://www.youtube.com/watch?v=8iPEnn-ltC8",
             "notes": "Banc à 30-45°. Omoplates serrées, descente jusqu'au haut de la poitrine."
@@ -190,8 +190,8 @@ EXERCICES = {
             "name": "Développé Décliné",
             "groupe": "Pecs",
             "sets": 3,
-            "rep_range": (8, 12),
-            "rest": "2 min",
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
             "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=LfyQBUKR8SE",
             "notes": "Cible le bas des pectoraux. Amplitude complète, contrôle le mouvement."
@@ -200,9 +200,9 @@ EXERCICES = {
             "name": "Curl Marteau",
             "groupe": "Biceps",
             "sets": 3,
-            "rep_range": (8, 12),
-            "rest": "90s",
-            "rest_seconds": 90,
+            "Nb_rep": (8, 12),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=zC3nLlEvin4",
             "notes": "Prise neutre, cible le brachio-radial. Pas de balancement."
         },
@@ -210,19 +210,19 @@ EXERCICES = {
             "name": "Curl Barre Debout",
             "groupe": "Biceps",
             "sets": 3,
-            "rep_range": (6, 10),
-            "rest": "90s",
-            "rest_seconds": 90,
+            "Nb_rep": (8, 12),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=kwG2ipFRgFo",
             "notes": "Barre droite ou EZ. Coudes fixes, amplitude complète."
         },
         {
             "name": "Face Pull Poulie",
             "groupe": "Arrière Épaule",
-            "sets": 4,
-            "rep_range": (12, 18),
-            "rest": "75s",
-            "rest_seconds": 75,
+            "sets": 3,
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=rep-qVOkqgk",
             "notes": "Poulie haute, tirer vers le visage. Rotation externe en fin de mouvement."
         },
@@ -230,9 +230,9 @@ EXERCICES = {
             "name": "Oiseau Haltère",
             "groupe": "Arrière Épaule",
             "sets": 3,
-            "rep_range": (12, 18),
-            "rest": "75s",
-            "rest_seconds": 75,
+            "Nb_rep": (7, 10),
+            "rest_max": "2 min",
+            "rest_seconds": 120,
             "video": "https://www.youtube.com/watch?v=ttvfGg9d76c",
             "notes": "Penché en avant, bras légèrement fléchis. Squeeze les omoplates."
         },
@@ -240,43 +240,25 @@ EXERCICES = {
 }
 
 POIDS_DEPART = {
-    "Développé Couché": 40,
-    "Pecs Poulie (Vis-à-vis)": 15,
-    "Biceps Pupitre": 15,
-    "Biceps Curl Poulie": 10,
-    "Triceps Unilatéral Poulie": 10,
-    "Extension Triceps Allongé": 15,
-    "Élévation Latérale": 8,
-    "Développé Militaire": 30,
-    "Tirage Vertical": 35,
-    "Tirage Horizontal": 35,
-    "Extension Triceps Poulie": 15,
-    "Dips": 0,
-    "Développé Incliné": 35,
-    "Développé Décliné": 35,
-    "Curl Marteau": 10,
-    "Curl Barre Debout": 20,
-    "Face Pull Poulie": 10,
-    "Oiseau Haltère": 6,
+    "Développé Couché": 60,
+    "Pecs Poulie (hug ou unilatérale)": 000,
+    "Biceps Pupitre":30,
+    "Biceps Curl Poulie": 000,
+    "Triceps Unilatéral Poulie": 000,
+    "Extension Triceps Allongé": 9/9,
+    "Élévation Latérale": 000,
+    "Développé Militaire": 22.5/22.5,
+    "Tirage Vertical": 59,
+    "Tirage Horizontal": 59,
+    "Extension Triceps Poulie": 000,
+    "Dips": 000,
+    "Développé Incliné": 60,
+    "Développé Décliné": 70,
+    "Curl Marteau": 15/15,
+    "Curl Barre Debout": 30,
+    "Face Pull Poulie": 000,
+    "Oiseau Haltère": 7.5/7.5,
 }
-
-PLANS_REPAS = {
-    "Option 1 - Classique/Riz": {
-        "petit_dejeuner": {"name": "Flocons Protéinés", "items": ["100g Flocons d'avoine", "1 Scoop Whey", "1 Banane", "Filet de miel"], "horaire": "08:00"},
-        "dejeuner": {"name": "Poulet & Riz", "items": ["150g Blanc de poulet", "300g Riz basmati", "Légumes variés", "1 c.s. huile d'olive"], "horaire": "12:30"},
-        "pre_entrainement": {"name": "Glucides Rapides", "items": ["2 Tranches pain de mie", "30g Confiture"], "horaire": "60 min avant la salle"},
-        "post_entrainement": {"name": "Shake Récupération", "items": ["30g Whey", "40g Maltodextrine", "5g Créatine"], "horaire": "Dans les 30 min après l'entraînement"},
-        "diner": {"name": "Œufs & Patates", "items": ["3 Œufs entiers", "2 Grosses pommes de terre", "1 Pomme"], "horaire": "20:00"}
-    },
-    "Option 2 - Pâtes/Dense": {
-        "petit_dejeuner": {"name": "Pancakes Protéinés", "items": ["100g Farine d'avoine", "1 Banane", "Blancs d'œufs", "Sirop sans sucre"], "horaire": "08:00"},
-        "dejeuner": {"name": "Bœuf Pâtes", "items": ["120g Bœuf haché maigre", "150g Pâtes sèches", "Sauce tomate"], "horaire": "12:30"},
-        "pre_entrainement": {"name": "Céréales Boost", "items": ["40g Céréales", "200ml Lait"], "horaire": "60 min avant la salle"},
-        "post_entrainement": {"name": "Shake Récupération", "items": ["30g Whey", "40g Maltodextrine", "5g Créatine"], "horaire": "Dans les 30 min après l'entraînement"},
-        "diner": {"name": "Poisson & Riz", "items": ["150g Poisson blanc", "300g Riz", "1/2 Avocat", "Verre de jus"], "horaire": "20:00"}
-    }
-}
-
 
 # ============================================================================
 # PERSISTENCE LOCALE (JSON)
