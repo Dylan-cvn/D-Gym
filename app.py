@@ -1156,16 +1156,16 @@ def main():
         .stButton > button:hover {
             background: #2ECC71;
             color: #000000;
-            box-shadow: 0 0 15px #00FF88, 0 0 30px #00FF8855;
+            box-shadow: 0 0 15px #2ECC71, 0 0 30px #00FF8855;
         }
         
         /* === BOUTON PRIMARY (Connexion) EN BLEU === */
-        .stButton > button[kind="primary"] {
+        .stButton > button[data-testid="stBaseButton-primary"] {
             border: 1px solid #3498DB;
             background: #3498DB;
             color: #FFFFFF;
         }
-        .stButton > button[kind="primary"]:hover {
+        .stButton > button[data-testid="stBaseButton-primary"]:hover {
             background: #2980B9;
             border-color: #2980B9;
             box-shadow: 0 0 15px #3498DB, 0 0 30px #3498DB55;
@@ -1197,8 +1197,8 @@ def main():
             transition: all 0.3s ease;
         }
         .stTabs [aria-selected="true"] {
-            color: #00FF88 !important;
-            border-bottom: 2px solid #00FF88 !important;
+            color: #2ECC71 !important;
+            border-bottom: 2px solid #2ECC71 !important;
             text-shadow: 0 0 10px #00FF8866;
         }
 
@@ -1211,7 +1211,7 @@ def main():
             text-align: center;
         }
         [data-testid="stMetricValue"] {
-            color: #00FF88;
+            color: #2ECC71;
             text-shadow: 0 0 8px #00FF8844;
         }
 
@@ -1224,7 +1224,7 @@ def main():
 
         /* === SLIDERS === */
         .stSlider > div > div > div > div {
-            background: #00FF88;
+            background: #2ECC71;
         }
 
         /* === DIVIDERS === */
@@ -1241,7 +1241,7 @@ def main():
             font-size: 2rem;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(90deg, #00FF88, #00CC66, #00FF88);
+            background: linear-gradient(90deg, #2ECC71, #00CC66, #2ECC71);
             border-radius: 25px;
             animation: pulse 1s infinite;
             color: #000;
@@ -1253,11 +1253,11 @@ def main():
 
         /* === GLOW LINKS === */
         a {
-            color: #00FF88 !important;
+            color: #2ECC71 !important;
             text-decoration: none;
         }
         a:hover {
-            text-shadow: 0 0 10px #00FF88;
+            text-shadow: 0 0 10px #2ECC71;
         }
     </style>""", unsafe_allow_html=True)
 
