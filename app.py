@@ -1149,7 +1149,7 @@ def main():
     # En-tête
     if not settings.get("mode_vacances", False):
         streak = calculer_streak(logs)
-            st.metric("🔥 Série", f"{streak['streak_semaines']}sem")
+        st.metric("🔥 Série", f"{streak['streak_semaines']}sem")
     else:
         st.markdown("## ❄️ MODE VACANCES ❄️")
 
