@@ -1158,6 +1158,18 @@ def main():
             color: #000000;
             box-shadow: 0 0 15px #00FF88, 0 0 30px #00FF8855;
         }
+        
+        /* === BOUTON PRIMARY (Connexion) EN BLEU === */
+        .stButton > button[kind="primary"] {
+            border: 1px solid #3498DB;
+            background: #3498DB;
+            color: #FFFFFF;
+        }
+        .stButton > button[kind="primary"]:hover {
+            background: #2980B9;
+            border-color: #2980B9;
+            box-shadow: 0 0 15px #3498DB, 0 0 30px #3498DB55;
+        }
 
         /* === INPUTS ARRONDIS === */
         .stNumberInput > div > div > input,
