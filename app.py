@@ -1135,15 +1135,118 @@ def main():
     coach = CoachAdaptatif(logs)
 
     # CSS
-    st.markdown("""<style>
-        .stApp { max-width: 100%; }
-        .stButton > button { width: 100%; padding: 0.75rem 1rem; font-size: 1.1rem; border-radius: 10px; }
-        .stNumberInput > div > div > input { text-align: center; font-size: 1.2rem; }
-        #MainMenu {visibility: hidden;} footer {visibility: hidden;}
-        .pr-celebration { font-size: 2rem; text-align: center; padding: 20px;
-            background: linear-gradient(90deg, #ffd700, #ffec8b, #ffd700);
-            border-radius: 15px; animation: pulse 1s infinite; }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+  st.markdown("""<style>
+        /* === FOND & GLOBAL === */
+        .stApp {
+            max-width: 100%;
+            background: #000000;
+        }
+
+        /* === BOUTONS NÉON === */
+        .stButton > button {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            border: 1px solid #00FF88;
+            background: transparent;
+            color: #00FF88;
+            transition: all 0.3s ease;
+        }
+        .stButton > button:hover {
+            background: #00FF88;
+            color: #000000;
+            box-shadow: 0 0 15px #00FF88, 0 0 30px #00FF8855;
+        }
+
+        /* === INPUTS ARRONDIS === */
+        .stNumberInput > div > div > input,
+        .stTextInput > div > div > input,
+        .stTextArea > div > div > textarea,
+        .stSelectbox > div > div {
+            border-radius: 20px;
+            border: 1px solid #1a1a2e;
+            background: #0D1117;
+            color: #E0E0E0;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .stNumberInput > div > div > input:focus,
+        .stTextInput > div > div > input:focus {
+            border-color: #00FF88;
+            box-shadow: 0 0 8px #00FF8844;
+        }
+
+        /* === TABS NÉON === */
+        .stTabs [data-baseweb="tab"] {
+            border-radius: 20px;
+            padding: 8px 16px;
+            color: #888;
+            transition: all 0.3s ease;
+        }
+        .stTabs [aria-selected="true"] {
+            color: #00FF88 !important;
+            border-bottom: 2px solid #00FF88 !important;
+            text-shadow: 0 0 10px #00FF8866;
+        }
+
+        /* === METRICS GLOW === */
+        [data-testid="stMetric"] {
+            background: #0D1117;
+            border: 1px solid #1a1a2e;
+            border-radius: 20px;
+            padding: 15px;
+            text-align: center;
+        }
+        [data-testid="stMetricValue"] {
+            color: #00FF88;
+            text-shadow: 0 0 8px #00FF8844;
+        }
+
+        /* === EXPANDERS === */
+        .streamlit-expanderHeader {
+            border-radius: 20px;
+            background: #0D1117;
+            border: 1px solid #1a1a2e;
+        }
+
+        /* === SLIDERS === */
+        .stSlider > div > div > div > div {
+            background: #00FF88;
+        }
+
+        /* === DIVIDERS === */
+        hr {
+            border-color: #1a1a2e;
+        }
+
+        /* === HIDE DEFAULTS === */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+
+        /* === PR CELEBRATION === */
+        .pr-celebration {
+            font-size: 2rem;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #00FF88, #00CC66, #00FF88);
+            border-radius: 25px;
+            animation: pulse 1s infinite;
+            color: #000;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* === GLOW LINKS === */
+        a {
+            color: #00FF88 !important;
+            text-decoration: none;
+        }
+        a:hover {
+            text-shadow: 0 0 10px #00FF88;
+        }
     </style>""", unsafe_allow_html=True)
 
     # En-tête
