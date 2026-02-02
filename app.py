@@ -1321,7 +1321,7 @@ def main():
 
                     if "precedent" in objectif:
                         st.caption(objectif["precedent"])
-                    min_r, max_r = exercice["NB_rep"]
+                    min_r, max_r = exercice["Nb_rep"]
                     st.caption(f"Plage de reps : {min_r}-{max_r} • Repos : {exercice['rest']}")
 
                     # Alerte retour après pause
@@ -1428,7 +1428,7 @@ def main():
                         "exercice": nom_ex, "data": log_entry
                     })
 
-                    min_r, max_r = exercice["rep_range"]
+                    min_r, max_r = exercice["Nb_rep"]
                     score, consistance = coach.score_session(sets_data, min_r, max_r)
                     scores.append(f"{nom_ex} : {score:.0f}/100 — {consistance}")
 
