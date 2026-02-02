@@ -1091,26 +1091,6 @@ class CoachAdaptatif:
 # HELPERS UI
 # ============================================================================
 
-def get_statut_moment() -> Tuple[str, str, str]:
-    heure = datetime.now().hour
-    if 6 <= heure < 9:
-        return "🌅", "Prépa Matinale", "Mange et hydrate-toi."
-    elif 9 <= heure < 12:
-        return "🧠", "Focus Matin", "Heures de pointe cognitive."
-    elif 12 <= heure < 14:
-        return "🍽️", "Déjeuner", "Mange, marche 15 min après."
-    elif 14 <= heure < 17:
-        return "🧠", "Focus Après-midi", "Deuxième bloc d'étude."
-    elif 17 <= heure < 20:
-        return "💪", "MODE SALLE", "C'est l'heure de pousser !"
-    elif 20 <= heure < 22:
-        return "🍽️", "Dîner & Détente", "Mange, relaxe."
-    elif 22 <= heure < 24:
-        return "🌙", "Mode Récupération", "Le sommeil, c'est des gains."
-    else:
-        return "😴", "Dodo", "La récup' c'est la clé."
-
-
 def format_badge_recommandation(recommandation: str) -> str:
     couleurs = {
         "PROGRESSION": "🟢", "POUSSER": "🔵", "CONSTRUCTION": "🟡", "CONSOLIDER": "🟠",
@@ -1169,14 +1149,6 @@ def main():
     # En-tête
     if not settings.get("mode_vacances", False):
         streak = calculer_streak(logs)
-        emoji, nom_statut, msg_statut = get_statut_moment()
-        c1, c2, c3 = st.columns([1, 2, 1])
-        with c1:
-            st.markdown(f"# {emoji}")
-        with c2:
-            st.markdown(f"### {nom_statut}")
-            st.caption(msg_statut)
-        with c3:
             st.metric("🔥 Série", f"{streak['streak_semaines']}sem")
     else:
         st.markdown("## ❄️ MODE VACANCES ❄️")
