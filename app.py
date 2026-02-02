@@ -19,7 +19,7 @@ from io import StringIO
 # ============================================================================
 
 APP_TITLE = "💪 Musculation"
-APP_PASSWORD = "230407"
+APP_PASSWORD = "01025360"
 
 POIDS_INCREMENT = {"compose": 2.5, "isolation": 1.25}
 BACKOFF_PERCENT = 0.90
