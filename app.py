@@ -897,7 +897,7 @@ class CoachAdaptatif:
 
     def get_prochain_objectif(self, nom_exercice: str, config_exercice: Dict) -> Dict:
         history = self.get_historique(nom_exercice, 8)
-        min_r, max_r = config_exercice["rep_range"]
+        min_r, max_r = config_exercice["Nb_rep"]
         increment = get_increment(nom_exercice)
 
         def arrondir(val: float) -> float:
