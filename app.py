@@ -1153,7 +1153,7 @@ def lien_exercice(name: str, url: str) -> str:
 
 def main():
     st.set_page_config(
-        page_title="CoachMuscu",
+        page_title="AnalyseMuscu",
         page_icon="💪",
         layout="centered",
         initial_sidebar_state="collapsed"
