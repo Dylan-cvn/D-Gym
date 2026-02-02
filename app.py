@@ -1135,7 +1135,7 @@ def main():
     coach = CoachAdaptatif(logs)
 
     # CSS
-  st.markdown("""<style>
+    st.markdown("""<style>
         /* === FOND & GLOBAL === */
         .stApp {
             max-width: 100%;
